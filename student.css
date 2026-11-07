@@ -1,0 +1,207 @@
+/*
+  Пишите свои стили ниже. Сохраняйте файл и обновляйте страницу.
+  Начинайте каждый селектор с класса задания, например .task-01 .meter.
+  Внутри @media тоже указывайте класс задания.
+*/
+
+/* 01. Полоска в половину контейнера */
+.track .meter {
+  width: 50%;
+}
+/* 02. Карточка с полями */
+.note {
+  width: 90%;
+  max-width: 420px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+/* 03. Баннер, который растёт вместе с окном */
+.banner {
+  min-height: 25vh;
+}
+/* 04. Заголовок в двух размерах */
+.headline {
+  font-size: 24px;
+}
+
+@media (min-width: 600px) {
+  .headline {
+    font-size: 40px;
+  }
+}
+/* 05. Из колонки в ряд */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+  }
+}
+/* 06. Меню из трёх ссылок */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 600px) {
+  .menu {
+    flex-direction: row;
+  }
+}
+/* 07. Каталог на одну, две и три колонки */
+.catalog {
+  display: grid;
+  grid-template-columns:  1fr;
+  gap: 12px;
+  
+}
+@media (min-width: 600px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* 08. Фото с подписью */
+.photo {
+  margin: 0;
+}
+/* 08. Фото с подписью */
+.photo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 700px) {
+  .photo {
+    display: flex;
+    
+
+  }
+
+  .photo img {
+    width: 55%;
+    flex-shrink: 0;
+  }
+
+  .photo figcaption {
+    flex: 1;
+    
+  }
+}
+/* 09. Первый экран с гибкой типографикой */
+.hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  font-size: clamp(24px, 6vw, 56px);
+}
+
+.hero p {
+  margin: 0;
+}
+/* 10. Мини-страница мастерской */
+
+.workshop {
+  width: 95%;
+  max-width: 900px;
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+}
+
+.workshop,
+.workshop * {
+  box-sizing: border-box;
+}
+  .workshop {
+  width: min(95%, 900px);
+  margin-inline: auto;
+}
+
+ .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+  .menu a {
+  padding: 0.5rem;
+  background: #eee;
+}
+
+@media (min-width: 640px) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.intro img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro-text {
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .intro img {
+    width: 40%;
+    flex-shrink: 0;
+  }
+
+  .intro-text {
+    flex: 1;
+  }
+}
+
+.task-10 .classes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.class-card {
+  padding: 1rem;
+  background: #eee;
+}
+
+.class-card h5 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+
+
+
+@media (min-width: 900px) {
+  .classes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
